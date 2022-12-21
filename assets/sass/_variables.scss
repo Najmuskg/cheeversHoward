@@ -1,0 +1,37 @@
+// ----- REM px function
+$baseFontSize: 16;
+@function rem($pixels, $context: $baseFontSize) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1rem;
+}
+
+// -- EM function
+$browser-context: 16; // Default
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+
+
+
+
+
+//   colours
+$color--white: #ffffff;
+$color--black: #000000;
+$color--1: #194040;
+$color--2: #B28543;
+$color--body-text: #848484;
+
+$color--4: #d7d7d7;
+$color--5: #002949;
+$color--6: #1b1b1c;
+$color--btn: #8894a1;
+$color--3: #808285;

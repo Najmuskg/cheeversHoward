@@ -1,0 +1,46 @@
+#preloader {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: $color--1;
+    transition: all 0.1s ease;
+    background-position: center;
+    z-index: 111;
+    .preloader--logo {
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            background-color: $color--2;
+            height: 1px;
+            width: 10px;
+        }
+    }
+}
+
+.loading body {
+    overflow: hidden;
+}
+
+.loaded #preloader {
+    animation-name: slideOut;
+    animation-fill-mode: forwards;
+    animation-duration: 0.8s;
+    animation-delay: 0.8s;
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-100%);
+    }
+}
