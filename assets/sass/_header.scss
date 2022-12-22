@@ -284,14 +284,14 @@
                         max-width: 100%;
                     }
                     .content-title {
-                        display: flex;
-                        justify-content: space-between;
+                        // display: flex;
+                        // justify-content: space-between;
                         @include respond-to("mobile") {
                             flex-direction: column;
                         }
                         .content-text {
-                            flex: 0 0 45%;
-                            max-width: 45%;
+                            // flex: 0 0 45%;
+                            // max-width: 45%;
                             @include respond-to("mobile") {
                                 flex: 0 0 100%;
                                 max-width: 100%;
@@ -307,6 +307,7 @@
                                 font-weight: 500;
                                 font-size: 55px;
                                 border-bottom: 2px solid $color--2;
+                                max-width: 482px;
                             }
                             .content-title--info {
                                 display: flex;
@@ -334,6 +335,7 @@
                                 font-family: ".";
                                 font-weight: 500;
                                 line-height: 35px;
+                                text-align: justify;
                                 @include respond-to("mobile") {
                                     margin-top: 10px;
                                 }
