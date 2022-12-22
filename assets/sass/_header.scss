@@ -22,7 +22,6 @@
                     @media (max-width: 870px) {
                         img {
                             display: inline-block;
-                           
                         }
                     }
                 }
@@ -151,6 +150,11 @@
             }
         }
     }
+    .header-float {
+        position: relative;
+        background-color: $color--1;
+        background-image: url(../images/Loader_bg.png);
+    }
     .header-sticky {
         background-color: $color--1;
         background-image: url(../images/Loader_bg.png);
@@ -184,14 +188,176 @@
             height: 100%;
         }
         .holder {
-            position: relative;
             z-index: 1;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            h1 {
-                max-width: 740px;
+            .title-wrap {
+                position: relative;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                h1 {
+                    max-width: 740px;
+                }
+            }
+        }
+    }
+    .cover {
+        position: relative;
+        width: 100%;
+        // height: 100vh;
+        .block {
+            background-color: #e9e9e9;
+            height: 250px;
+            position: absolute;
+            width: 100%;
+        }
+
+        .holder {
+            .content-block {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 45px 0;
+                @include respond-to("mobile") {
+                    flex-direction: column;
+                }
+                .content-indicator {
+                    flex: 0 0 15%;
+                    max-width: 15%;
+                    position: relative;
+                    top: -85px;
+                    @include respond-to("mobile") {
+                        flex: 0 0 100%;
+                        max-width: 100%;
+                        top: 0;
+                    }
+                    .indicator {
+                        border-left: 2px solid $color--2;
+                        padding-left: 20px;
+                        @include respond-to("mobile") {
+                            display: flex;
+                            padding: 0 0 10px;
+                            margin: 0 0 10px;
+                            border-left:none;
+                            border-bottom: 2px solid $color--2;
+                         }
+                        ul {
+                            
+                            li {
+                                @include respond-to("mobile") {
+                                   margin-right: 30px;
+                                 }
+                                a {
+                                    text-decoration: none;
+                                    color: rgb(33, 33, 77);
+                                    font-family: ".";
+                                    font-weight: 600;
+                                    position: relative;
+                                    &:hover {
+                                        color: $color--2;
+                                        transition: all 0.32s ease-in-out;
+                                        &::after {
+                                            background-color: $color--2;
+                                            transition: all 0.32s ease-in-out;
+                                        }
+                                    }
+                                    &::after {
+                                        content: "";
+                                        position: absolute;
+                                        background-color: rgb(33, 33, 77);
+                                        bottom: 3px;
+                                        left: 0;
+                                        width: 100%;
+                                        height: 2px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .content-info {
+                    flex: 0 0 85%;
+                    max-width: 85%;
+                    @include respond-to("mobile") {
+                        flex: 0 0 100%;
+                        max-width: 100%;
+                    }
+                    .content-title {
+                        display: flex;
+                        justify-content: space-between;
+                        @include respond-to("mobile") {
+                            flex-direction: column;
+                        }
+                        .content-text {
+                            flex: 0 0 45%;
+                            max-width: 45%;
+                            @include respond-to("mobile") {
+                                flex: 0 0 100%;
+                                max-width: 100%;
+                                order: 2;
+                                flex-direction: column;
+                                padding-top: 20px;
+                            }
+                            h1 {
+                                display: block;
+                                color: $color--black;
+                                padding-bottom: 10px;
+                                margin-bottom: 20px;
+                                font-weight: 500;
+                                font-size: 55px;
+                                border-bottom: 2px solid $color--2;
+                            }
+                            .content-title--info {
+                                display: flex;
+                                justify-content: space-between;
+                                padding-bottom: 30px;
+                                @include respond-to("mobile") {
+                                    padding-bottom: 0px;
+                                }
+                                h3 {
+                                    font-weight: 300;
+                                }
+                                .socials {
+                                    span {
+                                        margin-left: 15px;
+                                        img{
+                                            @include respond-to("mobile") {
+                                                background-color: #002949;
+                                            }  
+                                        }
+                                    }
+                                }
+                            }
+                            p {
+                                margin-top: 20px;
+                                font-family: ".";
+                                font-weight: 500;
+                                line-height: 35px;
+                                @include respond-to("mobile") {
+                                    margin-top: 10px;
+                                }
+                            }
+                        }
+                        .content-image {
+                            @include respond-to("mobile") {
+                                flex: 0 0 100%;
+                                max-width: 100%;
+                            }
+                            img {
+                                filter: grayscale(1);
+                            }
+                        }
+                    }
+                    p {
+                        margin-top: 20px;
+                        font-family: ".";
+                        font-weight: 500;
+                        line-height: 35px;
+                        @include respond-to("mobile") {
+                            margin-top: 10px;
+                        }
+                    }
+                }
             }
         }
     }

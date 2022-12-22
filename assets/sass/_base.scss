@@ -25,6 +25,7 @@ ol {
   font-family: "FreightSansProBook";
   line-height: 30px;
   margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -238,7 +239,7 @@ button:focus {
   margin-top: 1.875rem;
 }
 .breadcrumbs {
-  color: #fff;
+  color: #443f3f;
   display: flex;
   flex-wrap: wrap;
   font-size: 12px;
@@ -247,13 +248,14 @@ button:focus {
   letter-spacing: 0.09em;
   line-height: 0.75rem;
   padding: 30px 0 0 0;
+  text-transform: uppercase;
   li {
-    text-shadow: 2px 2px 4px #808285;
     a {
-      color:$color--white;
+      color: #c7c7c7;
       text-decoration: none;
-      font-weight: 400;
-      
+      font-family: ".";
+      font-weight: 900;
+      letter-spacing: 2.5px;
       
       &:hover{
         color: $color--1;
@@ -266,18 +268,30 @@ button:focus {
       text-overflow: ellipsis;
       white-space: nowrap;
     }
+    &:nth-child(2){
+      &::before{
+        background-color:#c7c7c7;
+      }
+    }
   }
   .separator {
+    position: relative;
+    
     &::before {
-      content: "/";
+      content: "";
+      position: absolute;
+      width: 6px ;
+      height: 6px;
+      background-color:#443f3f;
+      top: 4px;
+      left: -4px;
+      border-radius: 50%;
       display: block;
-      -webkit-transition: all 0.3s ease-in-out;
-      -o-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out;
     }
   }
   li + li {
-    margin-left: 0.1875rem;
+    margin-left: 10px;
     // 
   }
 }
