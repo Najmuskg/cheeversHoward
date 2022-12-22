@@ -1836,11 +1836,57 @@ h3 {
 .header-wrapper .cover .block {
   background-color: #e9e9e9;
   height: 250px;
-  position: absolute;
+  position: relative;
   width: 100%;
 }
 
-.header-wrapper .cover .holder .content-block {
+.header-wrapper .cover .block .holder .section-title {
+  max-width: 45.6%;
+  margin: 40px 0 0 160px;
+}
+
+.header-wrapper .cover .block .holder .section-title h1 {
+  display: block;
+  color: #000000;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 55px;
+  border-bottom: 2px solid #B28543;
+  max-width: 482px;
+}
+
+.header-wrapper .cover .block .holder .section-title .content-title--info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 30px;
+}
+
+@media (max-width: 576px) {
+  .header-wrapper .cover .block .holder .section-title .content-title--info {
+    padding-bottom: 0px;
+  }
+}
+
+.header-wrapper .cover .block .holder .section-title .content-title--info h3 {
+  font-weight: 300;
+}
+
+.header-wrapper .cover .block .holder .section-title .content-title--info .socials span {
+  margin-left: 15px;
+}
+
+@media (max-width: 576px) {
+  .header-wrapper .cover .block .holder .section-title .content-title--info .socials span img {
+    background-color: #002949;
+  }
+}
+
+.header-wrapper .cover .content-block .holder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1854,7 +1900,7 @@ h3 {
 }
 
 @media (max-width: 576px) {
-  .header-wrapper .cover .holder .content-block {
+  .header-wrapper .cover .content-block .holder {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1862,7 +1908,7 @@ h3 {
   }
 }
 
-.header-wrapper .cover .holder .content-block .content-indicator {
+.header-wrapper .cover .content-block .holder .content-indicator {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 15%;
           flex: 0 0 15%;
@@ -1872,7 +1918,7 @@ h3 {
 }
 
 @media (max-width: 576px) {
-  .header-wrapper .cover .holder .content-block .content-indicator {
+  .header-wrapper .cover .content-block .holder .content-indicator {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
@@ -1881,7 +1927,7 @@ h3 {
   }
 }
 
-.header-wrapper .cover .holder .content-block .content-indicator .indicator {
+.header-wrapper .cover .content-block .holder .content-indicator .indicator {
   border-left: 2px solid #B28543;
   padding-left: 20px;
   -webkit-transition-delay: 0.6s;
@@ -1890,7 +1936,7 @@ h3 {
 }
 
 @media (max-width: 576px) {
-  .header-wrapper .cover .holder .content-block .content-indicator .indicator {
+  .header-wrapper .cover .content-block .holder .content-indicator .indicator {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1902,12 +1948,12 @@ h3 {
 }
 
 @media (max-width: 576px) {
-  .header-wrapper .cover .holder .content-block .content-indicator .indicator ul li {
+  .header-wrapper .cover .content-block .holder .content-indicator .indicator ul li {
     margin-right: 30px;
   }
 }
 
-.header-wrapper .cover .holder .content-block .content-indicator .indicator ul li a {
+.header-wrapper .cover .content-block .holder .content-indicator .indicator ul li a {
   text-decoration: none;
   color: #21214d;
   font-family: ".";
@@ -1915,21 +1961,21 @@ h3 {
   position: relative;
 }
 
-.header-wrapper .cover .holder .content-block .content-indicator .indicator ul li a:hover {
+.header-wrapper .cover .content-block .holder .content-indicator .indicator ul li a:hover {
   color: #B28543;
   -webkit-transition: all 0.32s ease-in-out;
   -o-transition: all 0.32s ease-in-out;
   transition: all 0.32s ease-in-out;
 }
 
-.header-wrapper .cover .holder .content-block .content-indicator .indicator ul li a:hover::after {
+.header-wrapper .cover .content-block .holder .content-indicator .indicator ul li a:hover::after {
   background-color: #B28543;
   -webkit-transition: all 0.32s ease-in-out;
   -o-transition: all 0.32s ease-in-out;
   transition: all 0.32s ease-in-out;
 }
 
-.header-wrapper .cover .holder .content-block .content-indicator .indicator ul li a::after {
+.header-wrapper .cover .content-block .holder .content-indicator .indicator ul li a::after {
   content: "";
   position: absolute;
   background-color: #21214d;
@@ -1939,7 +1985,7 @@ h3 {
   height: 2px;
 }
 
-.header-wrapper .cover .holder .content-block .content-info {
+.header-wrapper .cover .content-block .content-info {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 85%;
           flex: 0 0 85%;
@@ -1947,7 +1993,7 @@ h3 {
 }
 
 @media (max-width: 576px) {
-  .header-wrapper .cover .holder .content-block .content-info {
+  .header-wrapper .cover .content-block .content-info {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
@@ -1955,75 +2001,13 @@ h3 {
   }
 }
 
-@media (max-width: 576px) {
-  .header-wrapper .cover .holder .content-block .content-info .content-title {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
+.header-wrapper .cover .content-block .content-info .text-info img {
+  float: right;
+  margin: -240px 0 0 20px;
 }
 
-@media (max-width: 576px) {
-  .header-wrapper .cover .holder .content-block .content-info .content-title .content-text {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
-    max-width: 100%;
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding-top: 20px;
-  }
-}
-
-.header-wrapper .cover .holder .content-block .content-info .content-title .content-text h1 {
-  display: block;
-  color: #000000;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
-  font-weight: 500;
-  font-size: 55px;
-  border-bottom: 2px solid #B28543;
-  max-width: 482px;
-}
-
-.header-wrapper .cover .holder .content-block .content-info .content-title .content-text .content-title--info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-bottom: 30px;
-}
-
-@media (max-width: 576px) {
-  .header-wrapper .cover .holder .content-block .content-info .content-title .content-text .content-title--info {
-    padding-bottom: 0px;
-  }
-}
-
-.header-wrapper .cover .holder .content-block .content-info .content-title .content-text .content-title--info h3 {
-  font-weight: 300;
-}
-
-.header-wrapper .cover .holder .content-block .content-info .content-title .content-text .content-title--info .socials span {
-  margin-left: 15px;
-}
-
-@media (max-width: 576px) {
-  .header-wrapper .cover .holder .content-block .content-info .content-title .content-text .content-title--info .socials span img {
-    background-color: #002949;
-  }
-}
-
-.header-wrapper .cover .holder .content-block .content-info .content-title .content-text p {
-  margin-top: 20px;
+.header-wrapper .cover .content-block .content-info .text-info p {
+  margin-top: 40px;
   font-family: ".";
   font-weight: 500;
   line-height: 35px;
@@ -2031,34 +2015,7 @@ h3 {
 }
 
 @media (max-width: 576px) {
-  .header-wrapper .cover .holder .content-block .content-info .content-title .content-text p {
-    margin-top: 10px;
-  }
-}
-
-@media (max-width: 576px) {
-  .header-wrapper .cover .holder .content-block .content-info .content-title .content-image {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
-    max-width: 100%;
-  }
-}
-
-.header-wrapper .cover .holder .content-block .content-info .content-title .content-image img {
-  -webkit-filter: grayscale(1);
-          filter: grayscale(1);
-}
-
-.header-wrapper .cover .holder .content-block .content-info p {
-  margin-top: 20px;
-  font-family: ".";
-  font-weight: 500;
-  line-height: 35px;
-}
-
-@media (max-width: 576px) {
-  .header-wrapper .cover .holder .content-block .content-info p {
+  .header-wrapper .cover .content-block .content-info .text-info p {
     margin-top: 10px;
   }
 }
